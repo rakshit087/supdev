@@ -7,7 +7,8 @@ const toggleDark = useToggle(isDark);
 <template>
   <nav className="flex justify-end h-24 pr-8 md:h-1/6">
     <button @click="toggleDark()">
-      <p class="text-2xl font-bold">{{ isDark ? '🌞' : '🌙' }}</p>
+      <IconMoon v-if="isDark" class="h-7 w-7" />
+      <IconSun v-else class="h-7 w-7" />
     </button>
   </nav>
-</template>
+</template> 
