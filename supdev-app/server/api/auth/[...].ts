@@ -4,8 +4,9 @@ import GithubProvider from 'next-auth/providers/github';
 const runtimeConfig = useRuntimeConfig();
 
 export default NuxtAuthHandler({
+  secret: runtimeConfig.secret,
   pages: {
-    signIn: '/login'
+    signIn: '/'
   },
   providers: [
     // @ts-expect-error
